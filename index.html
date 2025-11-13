@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AtitudeSports — Camisetas</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="content">
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+      
+          <img src="img/LogoAtitudeSports.jpeg" alt="AtitudeSports" class="site-logo" onerror="this.onerror=null;this.src='logo.svg'" />
+          <h1>AtitudeSports</h1>
+        </div>
+        <div class="header-actions">
+          <a class="btn contact" href="https://wa.me/5543996212570" target="_blank" rel="noopener">Fale conosco</a>
+        </div>
+        <p class="subtitle">Camisetas de time — selecione os modelos desejados e envie para o atendente</p>
+        <span>⚠️ Caso não tenha achado o modelo desejado, entre em contato conosco.</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="products-section">
+        <div class="toolbar">
+          <div id="selected-count">Selecionados: <strong>0</strong></div>
+          <div class="search" role="search" aria-label="Pesquisar camisetas">
+            <label for="search-input" class="visually-hidden">Pesquisar camisetas</label>
+            <span class="search-icon" aria-hidden="true">
+              <!-- SVG ícone de lupa -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <input id="search-input" class="search-input" type="search" placeholder="Pesquisar camiseta..." aria-label="Pesquisar camisetas" autocomplete="off" />
+            <button id="search-clear" class="search-clear" aria-label="Limpar pesquisa" hidden>&times;</button>
+            <ul id="search-suggestions" class="search-suggestions" role="listbox" hidden></ul>
+          </div>
+          <div class="actions">
+            <button id="clear-selection" class="btn">Limpar</button>
+            <button id="send-whatsapp" class="btn primary">Enviar para atendente</button>
+            <!-- Aba rápida para camisetas infantis -->
+            <button id="filter-infantil" class="btn team-btn" data-team="Infantil" onclick="setTeamFilter('Infantil')"> Camisa Infantil</button>
+            <!-- Aba rápida para bermudas Nike -->
+            <button id="filter-bermudas" class="btn team-btn" data-team="Nike Shorts" onclick="setTeamFilter('Nike Shorts')">Bermudas Nike</button>
+            <!-- Voltar para a aba principal (adulto) -->
+            <button id="filter-adulto" class="btn team-btn" data-team="" onclick="setTeamFilter('')">Camisa Adulto</button>
+          </div>
+        </div>
+
+        <div id="products-grid" class="grid"></div>
+      </section>
+    </main>
+
+    <!-- Modal de visualização -->
+    <div id="media-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close" aria-label="Fechar">×</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Para consultar preços ou tirar dúvidas envie sua seleção para: <a href="tel:43996756536">(43) 99675-6536</a></p>
+        <p>Para consultar preços ou tirar dúvidas envie sua seleção para: <a href="tel:43996212570">(43) 99621-2570</a></p>
+      </div>
+    </footer>
+
+      </div> <!-- /.content -->
+  </div> <!-- /.app -->
+    <!-- Botão flutuante: voltar ao topo -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
